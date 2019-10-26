@@ -111,9 +111,11 @@ ul {
 
 .false {
   color: tomato;
+  font-size: 20px;
 }
 
 .true {
   color: green;
+  font-size: 20px;
 }
 </style>

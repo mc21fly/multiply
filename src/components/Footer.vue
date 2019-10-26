@@ -1,6 +1,6 @@
 <template>
   <div class="footerWraper">
-      mcfly
+      <a href="https://github.com/mc21fly?tab=repositories"><i class="fab fa-github"></i> mcfly</a>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 
 .footerWraper {
     display: flex;
@@ -20,6 +20,11 @@ export default {
     padding: 20px;
     background-color: tomato;
     border-radius: 0 0 10px 10px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 }
 
 </style>
