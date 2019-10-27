@@ -48,6 +48,7 @@ body {
   align-items: space-between;
   justify-content: space-between;
   padding: 30px;
+  width: 100%;
 }
 
 @media (min-width: 1200px) {
