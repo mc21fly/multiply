@@ -1,12 +1,12 @@
 export default class PON {
-  constructor(number1, number2) {
-    this.n1 = number1;
-    this.n2 = number2;
+  constructor(n1, n2) {
+    this.n1 = n1;
+    this.n2 = n2;
     this.guessed = undefined;
     this.answer = undefined;
-  }
 
-  ans() {
-    return `${this.n1 * this.n2}`;
+    this.ans = () => `${this.n1 * this.n2}`;
+    this.setTrue = (answer) => { this.answer = answer; this.guessed = 'true'; };
+    this.setFalse = (answer) => { this.answer = answer; this.guessed = 'false'; };
   }
 }

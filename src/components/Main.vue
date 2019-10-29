@@ -22,14 +22,14 @@
 <script>
 import Game from './game/Game';
 
-window.game = new Game();
-window.game.newPair();
+const game = new Game();
+game.newPair();
 
 export default {
 
   data() {
     return {
-      numbers: window.game.showNumbers(),
+      numbers: game.showNumbers(),
       answer: '',
       isover: false,
       results: undefined,
@@ -41,8 +41,8 @@ export default {
 
   methods: {
     checkAnswer() {
-      window.game.checkAnswer(this.answer);
-      this.numbers = window.game.showNumbers();
+      game.checkAnswer(this.answer);
+      this.numbers = game.showNumbers();
       this.answer = '';
       this.$refs.answer.focus();
     },
@@ -102,14 +102,14 @@ export default {
 
   mounted() {
     this.$refs.answer.focus();
-    window.setInterval(() => {
+    setInterval(() => {
       this.showTime();
     }, 10);
   },
 
   updated() {
-    this.isover = window.game.isOver();
-    this.results = window.game.result;
+    this.isover = game.isOver();
+    this.results = game.result;
     this.final();
   },
 };
